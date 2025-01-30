@@ -2,8 +2,6 @@
 Abap integration with Microsoft CRM
 > Fast and easy way to read data from Microsoft CRM from ABAP.
 
-[TOC]
-
 # Idea behind
 The core idea behind this integration is to simplify the reading of data from the CRM as much as possible. A dedicated class handles the interaction with the CRM, exposing two simple methods: get_entities and get_entity.
 
