@@ -10,7 +10,7 @@ The core idea behind this integration is to simplify the reading of data from th
 The most simply way is to create abap structure that rappresent json data. For example reading an user can be done with
     
 ```ABAP
-    DATA(lc_crm) = NEW z_cl_ars_tool_crmms( ).
+    DATA(lc_crm) = NEW z_cl_abap_crmms_tools( ).
 
     data: begin of user,
       systemuserid type string,
@@ -30,9 +30,10 @@ The most simply way is to create abap structure that rappresent json data. For e
 
 ## Creating instance
 
-`    DATA(lc_crm) = NEW z_cl_ars_tool_crmms( ).`
+`    DATA(lc_crm) = NEW z_cl_abap_crmms_tools( ).`
 
-Create an instance with default setting. Class constructor allow receiving paramters to override default.
+Create an instance with default setting. Class constructor allow receiving paramters i_logical_system to identify correct system.
+System are maintein in custom table
 
 
 ## Get list from crm
@@ -46,11 +47,11 @@ example
 ```
 TYPES: BEGIN OF lty_opp,
          opportunityid         TYPE string,
-         id                    TYPE string,    " ald_opportunitynumber
+         id                    TYPE string,    
        END OF lty_opp.
 
 DATA: lt_mapping  TYPE /ui2/cl_json=>name_mappings.
-lt_mapping = VALUE #( ( abap = 'ID' json = 'ald_opportunitynumber' ) ).
+lt_mapping = VALUE #( ( abap = 'ID' json = 'opportunityid' ) ).
 
 
 lc_crm->get_entities(
