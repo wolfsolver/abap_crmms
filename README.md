@@ -45,35 +45,32 @@ Get_Entities method allow to retrive list of object.
 
 example
 ```
-TYPES: BEGIN OF lty_opp,
-         opportunityid         TYPE string,
-         id                    TYPE string,    
-       END OF lty_opp.
+TYPES: BEGIN OF lty_account_list,
+         id         TYPE string,  " this accountid  field with different name so we need mapping
+         name       TYPE string,
+         websiteurl type string,
+       END OF lty_account_list.
 
-DATA: lt_mapping  TYPE /ui2/cl_json=>name_mappings.
-lt_mapping = VALUE #( ( abap = 'ID' json = 'opportunityid' ) ).
+DATA: lt_accounts TYPE TABLE OF lty_account_list.
+
+  DATA: LT_Model_SELECT TYPE /UI2/CL_JSON=>NAME_MAPPINGS .
+  LT_Model_SELECT = VALUE #(
+        ( abap = 'ID' json = 'accountid' )
+      ).
 
 
 lc_crm->get_entities(
   EXPORTING
-    i_entities                 = 'opportunities'
-    i_filter                   = '_ald_companyid_value%20eq%2072a8d326-f187-eb11-a812-000d3ab4add9'
-    i_select                   = 'ald_opportunitynumber,opportunityid'
-    I_NAME_MAPPINGS            = lt_mapping
+    i_entities                 = 'accounts'
+    i_limit                    = 10
+    i_name_mappings            = LT_Model_SELECT
   CHANGING
-    e_tables                   = lt_opp
+    e_tables                   = lt_accounts
    EXCEPTIONS
      missing_token              = 1
      http_communication_failure = 2
      OTHERS                     = 3
 ).
-
-FIELD-SYMBOLS <row> TYPE lty_opp.
-
-LOOP AT lt_opp ASSIGNING <row>.
-  WRITE: / 'Opp id:', <row>-opportunityid,
-           'pretty id:', <row>-id.
-ENDLOOP.
 ```
 
 ## Using mapping
