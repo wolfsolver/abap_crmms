@@ -93,4 +93,18 @@ Simply define maping table like this
 this allow to:
 - Map accountid json field to ID abap field
 - retrive isocur from entity transactioncurrencies making a lookup using value _transactioncurrencyid_value
-- do the same for currency
+- do the same for currency and usage
+
+## Demo Program
+Two demo program contains sample data.
+
+# Oauth
+Table zabap_crmms_conf contais entry for auth with Microsoft CRM. table can be maintened with SM30.
+
+| Field  | content |
+| ------------- | ------------- |
+| token_url | contains URL for login |
+| client_id  | Client ID for auth  |
+| client_secret |  Secret key from CRM MS | 
+| base_url | tenat CRM url (without /) |
+
