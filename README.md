@@ -81,18 +81,16 @@ mapping can be used to:
 Simply define maping table like this 
 
 ```abap
-  DATA: LT_Model_ENTITY  TYPE z_cl_ars_tool_crmms=>entity_mappings.
+  DATA: LT_Model_ENTITY  TYPE Z_CL_ABAP_CRMMS_TOOLS=>entity_mappings.
   LT_Model_ENTITY = VALUE #(
-        ( abap = 'ID' json = 'ald_opportunitynumber' )
-        ( abap = 'company' ENTITY = 'ald_companies' SELECT = 'ald_name' key = '_ald_companyid_value' )
+        ( abap = 'ID' json = 'accountid' )
         ( abap = 'isocur' ENTITY = 'transactioncurrencies' SELECT = 'isocurrencycode' key = '_transactioncurrencyid_value' )
-        ( abap = 'LOB' ENTITY = 'ald_lineofbusinesses' SELECT = 'ald_name' key = '_ald_lineofbusinessid_value' )
-        ( abap = 'Sales' ENTITY = 'systemusers' SELECT = 'domainname' key = '_ald_personinchargeid_value' )
-        ( abap = 'customer' ENTITY = 'accounts' SELECT = 'name' key = '_customerid_value' )
+        ( abap = 'user' ENTITY = 'systemusers' SELECT = 'fullname' key = '_owninguser_value' )
+        ( abap = 'businessunit' Entity = 'businessunits' SELECT = 'name' key = '_owningbusinessunit_value' )
       ).
 ```
 
 this allow to:
-- Map ald_opportunitynumber json field to ID abap field
-- retrive ald_name from entity ald_companies making a lookup using value _ald_companyid_value from opporttunity into company abap field
-- do the same for currency, line of business, sales and customer.
+- Map accountid json field to ID abap field
+- retrive isocur from entity transactioncurrencies making a lookup using value _transactioncurrencyid_value
+- do the same for currency
