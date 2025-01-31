@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>Z_CL_ABAP_CRMMS_TOOLS</CLSNAME>
+    <LANGU>E</LANGU>
+    <DESCRIPT>Tools for Microsoft Integration</DESCRIPT>
+    <STATE>1</STATE>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+   </VSEOCLASS>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CMPNAME>CONSTRUCTOR</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>CONSTRUCTOR</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GET_CACHE_FOR</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Retrive single instance</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GET_ENTITIES</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Retrive list of collection</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GET_ENTITY</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Retrive single instance</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GET_ENTITY_VALUE_FOR_KEY</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Retrive single instance</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GET_TOKEN</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>get microsoft token</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>PUT_CACHE_FOR</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Retrive single instance</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+   <DESCRIPTIONS_SUB>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_CACHE_FOR</CMPNAME>
+     <SCONAME>E_JSON</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Reporting Along a Structure</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_ENTITIES</CMPNAME>
+     <SCONAME>I_LIMIT</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Whole Number with +/- Sign (-2.147.483.648 .. 2.147.483.647)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_ENTITIES</CMPNAME>
+     <SCONAME>I_NAME_MAPPINGS</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>ABAP&lt;-&gt;JSON Name Mapping Table</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_ENTITY</CMPNAME>
+     <SCONAME>E_ENTITY</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Reporting Along a Structure</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_ENTITY</CMPNAME>
+     <SCONAME>I_BYPASS_CACHE</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Boolean Variable (X = True, - = False, Space = Unknown)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_ENTITY_VALUE_FOR_KEY</CMPNAME>
+     <SCONAME>E_VALUE</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Reporting Along a Structure</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>PUT_CACHE_FOR</CMPNAME>
+     <SCONAME>I_JSON</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Reporting Along a Structure</DESCRIPT>
+    </SEOSUBCOTX>
+   </DESCRIPTIONS_SUB>
+  </asx:values>
+ </asx:abap>
+</abapGit>
