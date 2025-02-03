@@ -2,7 +2,7 @@
 Abap integration with Microsoft CRM
 > Fast and easy way to read data from Microsoft CRM from ABAP.
 
-<IMG src="https://img.shields.io/github/downloads-pre/wolfsolver/abap_crmms/latest/total">
+<!-- IMG src="https://img.shields.io/github/downloads-pre/wolfsolver/abap_crmms/latest/total" -->
 
 
 # Idea behind
