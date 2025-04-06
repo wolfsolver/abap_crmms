@@ -8,6 +8,9 @@ Abap integration with Microsoft CRM
 # Idea behind
 The core idea behind this integration is to simplify the reading of data from the CRM as much as possible. A dedicated class handles the interaction with the CRM, exposing two simple methods: get_entities and get_entity.
 
+# Install 
+Simple download and install via (AbapGit)[https://github.com/abapGit/abapGit]
+
 # How to Use - Basic Usage
 
 The most simply way is to create abap structure that rappresent json data. For example reading an user can be done with
