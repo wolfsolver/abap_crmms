@@ -4,4 +4,7 @@
 
 ### head 3
 
+Stable
+{: .label .label-green }
+
 paragraph
