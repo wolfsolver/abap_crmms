@@ -1,1 +1,7 @@
 theme: just-the-docs
+
+# Name of website
+title: SAP ABAP Integration with SAP CRM
+
+# Your name to show in the footer
+author: Emmanuele Prudenzano
