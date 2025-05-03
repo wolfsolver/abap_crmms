@@ -4,6 +4,8 @@ Abap integration with Microsoft CRM
 
 <!-- IMG src="https://img.shields.io/github/downloads-pre/wolfsolver/abap_crmms/latest/total" -->
 
+## Download
+Download via AbapGit from [abap_crmms repository](https://github.com/wolfsolver/abap_crmms/)
 
 # Idea behind
 The core idea behind this integration is to simplify the reading of data from the CRM as much as possible. A dedicated class handles the interaction with the CRM, exposing two simple methods: get_entities and get_entity.
